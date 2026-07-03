@@ -1,0 +1,81 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.11.35303.130
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{36945A18-DAD5-47EE-9A58-C7112F81ECC1}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{51514C17-D634-44C2-981F-EA240086230D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "infrastructure", "infrastructure", "{432E2091-9090-4510-8F7B-EEDADF7C4736}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "docs", "docs", "{686F7842-BC5E-4CE3-9D84-A210AF72A837}"
+	ProjectSection(SolutionItems) = preProject
+		readme.md = readme.md
+	EndProjectSection
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UrbanMart.BuildingBlocks", "UrbanMart.BuildingBlocks\UrbanMart.BuildingBlocks.csproj", "{97385215-9C63-458A-BB96-EA1BCE4B3490}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UrbanMart.Modules", "UrbanMart.Modules\UrbanMart.Modules.csproj", "{ECEC3EDC-FE49-484D-8AB0-0274F9F37567}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UrbanMart.Api", "UrbanMart.Api\UrbanMart.Api.csproj", "{C3820D39-5050-4239-B0DE-647CA00053CF}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "docker", "docker", "{A76CE58C-0CA8-4A54-8E76-12C586806D68}"
+	ProjectSection(SolutionItems) = preProject
+		.env = .env
+		docker-compose.yml = docker-compose.yml
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "scripts", "scripts", "{DFEF5AB3-B93D-43AE-8AAE-E8464973A1BC}"
+	ProjectSection(SolutionItems) = preProject
+		stack-down.ps1 = stack-down.ps1
+		stack-up.ps1 = stack-up.ps1
+	EndProjectSection
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UrbanMart.IntegrationTests", "UrbanMart.IntegrationTests\UrbanMart.IntegrationTests.csproj", "{6422F156-ED03-4693-8F92-448467B12BB9}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UrbanMart.ArchitectureTests", "UrbanMart.ArchitectureTests\UrbanMart.ArchitectureTests.csproj", "{6B3A8744-B54C-41F6-95E8-7ECC2996FC03}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{97385215-9C63-458A-BB96-EA1BCE4B3490}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{97385215-9C63-458A-BB96-EA1BCE4B3490}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{97385215-9C63-458A-BB96-EA1BCE4B3490}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{97385215-9C63-458A-BB96-EA1BCE4B3490}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ECEC3EDC-FE49-484D-8AB0-0274F9F37567}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ECEC3EDC-FE49-484D-8AB0-0274F9F37567}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ECEC3EDC-FE49-484D-8AB0-0274F9F37567}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ECEC3EDC-FE49-484D-8AB0-0274F9F37567}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C3820D39-5050-4239-B0DE-647CA00053CF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C3820D39-5050-4239-B0DE-647CA00053CF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C3820D39-5050-4239-B0DE-647CA00053CF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C3820D39-5050-4239-B0DE-647CA00053CF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6422F156-ED03-4693-8F92-448467B12BB9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6422F156-ED03-4693-8F92-448467B12BB9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6422F156-ED03-4693-8F92-448467B12BB9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6422F156-ED03-4693-8F92-448467B12BB9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6B3A8744-B54C-41F6-95E8-7ECC2996FC03}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6B3A8744-B54C-41F6-95E8-7ECC2996FC03}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6B3A8744-B54C-41F6-95E8-7ECC2996FC03}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6B3A8744-B54C-41F6-95E8-7ECC2996FC03}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{97385215-9C63-458A-BB96-EA1BCE4B3490} = {36945A18-DAD5-47EE-9A58-C7112F81ECC1}
+		{ECEC3EDC-FE49-484D-8AB0-0274F9F37567} = {36945A18-DAD5-47EE-9A58-C7112F81ECC1}
+		{C3820D39-5050-4239-B0DE-647CA00053CF} = {36945A18-DAD5-47EE-9A58-C7112F81ECC1}
+		{A76CE58C-0CA8-4A54-8E76-12C586806D68} = {432E2091-9090-4510-8F7B-EEDADF7C4736}
+		{DFEF5AB3-B93D-43AE-8AAE-E8464973A1BC} = {432E2091-9090-4510-8F7B-EEDADF7C4736}
+		{6422F156-ED03-4693-8F92-448467B12BB9} = {51514C17-D634-44C2-981F-EA240086230D}
+		{6B3A8744-B54C-41F6-95E8-7ECC2996FC03} = {51514C17-D634-44C2-981F-EA240086230D}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {6610CFA9-9B8D-46AA-B097-9007687079C6}
+	EndGlobalSection
+EndGlobal
