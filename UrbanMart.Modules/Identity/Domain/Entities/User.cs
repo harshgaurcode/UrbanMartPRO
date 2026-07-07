@@ -20,17 +20,13 @@ namespace UrbanMart.Modules.Identity.Domain.Entities
 
         public string PasswordHash { get; set; }
 
-        public string PasswordSalt { get; set; }
-
-        public bool EmailVerified { get; set; }
-
-        public bool MobileVerified { get; set; }
-
         public UserStatus Status { get; set; }
 
         public bool IsEmailVerified { get; set; }
 
         public bool IsMobileNumberVerified { get; set; }
+
+        public ICollection<UserRole> UserRoles { get; private set; } = [];
     }
 
     public class UserRole
@@ -44,5 +40,13 @@ namespace UrbanMart.Modules.Identity.Domain.Entities
         public User User { get; set; } = null!;
 
         public Role Role { get; set; } = null!;
+
+        public DateTimeOffset CreatedAt { get; set; }
+
+        public DateTimeOffset? UpdatedAt { get; set; }
+
+        public Guid? CreatedBy { get; set; }
+
+        public Guid? UpdatedBy { get; set; }
     }
 }

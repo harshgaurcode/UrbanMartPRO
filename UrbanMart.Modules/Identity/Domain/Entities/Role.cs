@@ -19,6 +19,6 @@ namespace UrbanMart.Modules.Identity.Domain.Entities
             get; set;
         }
 
-        public string Description { get; set; }
+        public string? Description { get; set; }
     }
 }

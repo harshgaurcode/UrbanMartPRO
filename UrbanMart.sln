@@ -11,6 +11,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "infrastructure", "infrastru
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "docs", "docs", "{686F7842-BC5E-4CE3-9D84-A210AF72A837}"
 	ProjectSection(SolutionItems) = preProject
+		migration.md = migration.md
 		readme.md = readme.md
 	EndProjectSection
 EndProject
@@ -35,6 +36,10 @@ EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UrbanMart.IntegrationTests", "UrbanMart.IntegrationTests\UrbanMart.IntegrationTests.csproj", "{6422F156-ED03-4693-8F92-448467B12BB9}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UrbanMart.ArchitectureTests", "UrbanMart.ArchitectureTests\UrbanMart.ArchitectureTests.csproj", "{6B3A8744-B54C-41F6-95E8-7ECC2996FC03}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tools", "tools", "{E625B4EC-82B9-4283-8BB8-45BC6F327BF4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UrbanMart.Cli", "UrbanMart.Cli\UrbanMart.Cli.csproj", "{A858451A-8342-4134-AE6D-55D93712ED9C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -62,6 +67,10 @@ Global
 		{6B3A8744-B54C-41F6-95E8-7ECC2996FC03}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6B3A8744-B54C-41F6-95E8-7ECC2996FC03}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6B3A8744-B54C-41F6-95E8-7ECC2996FC03}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A858451A-8342-4134-AE6D-55D93712ED9C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A858451A-8342-4134-AE6D-55D93712ED9C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A858451A-8342-4134-AE6D-55D93712ED9C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A858451A-8342-4134-AE6D-55D93712ED9C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -74,6 +83,7 @@ Global
 		{DFEF5AB3-B93D-43AE-8AAE-E8464973A1BC} = {432E2091-9090-4510-8F7B-EEDADF7C4736}
 		{6422F156-ED03-4693-8F92-448467B12BB9} = {51514C17-D634-44C2-981F-EA240086230D}
 		{6B3A8744-B54C-41F6-95E8-7ECC2996FC03} = {51514C17-D634-44C2-981F-EA240086230D}
+		{A858451A-8342-4134-AE6D-55D93712ED9C} = {E625B4EC-82B9-4283-8BB8-45BC6F327BF4}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {6610CFA9-9B8D-46AA-B097-9007687079C6}
