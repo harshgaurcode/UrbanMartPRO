@@ -1,5 +1,4 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using System;
 using UrbanMart.Modules.Identity.Domain.Entities;
 
 namespace UrbanMart.Modules.Identity.Persistence.Configurations
@@ -10,11 +9,22 @@ namespace UrbanMart.Modules.Identity.Persistence.Configurations
         {
             builder.ToTable("user_roles");
 
-            builder.HasKey(ur => new { ur.UserId, ur.RoleId });
+            builder.HasKey(x => x.Id);
 
-            builder.HasOne(ur => ur.User);
+            builder.Property(x => x.Role)
+                .HasConversion<int>()
+                .IsRequired();
 
-            builder.HasOne(ur => ur.Role);
+            builder.Property(x => x.IsActive)
+                .IsRequired();
+
+            builder.HasIndex(x => new { x.UserId, x.Role })
+                .IsUnique();
+
+            builder.HasOne(x => x.User)
+                .WithMany(x => x.UserRoles)
+                .HasForeignKey(x => x.UserId)
+                .OnDelete(DeleteBehavior.Cascade);
         }
     }
 }

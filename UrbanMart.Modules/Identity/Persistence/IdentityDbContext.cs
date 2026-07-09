@@ -1,10 +1,4 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.Data;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using UrbanMart.BuildingBlocks.Domain;
 using UrbanMart.Modules.Identity.Domain.Entities;
 
@@ -18,9 +12,7 @@ namespace UrbanMart.Modules.Identity.Persistence
         }
 
         public DbSet<User> Users => Set<User>();
-
-        public DbSet<Role> Roles => Set<Role>();
-
+        public DbSet<ExternalLogin> ExternalLogins => Set<ExternalLogin>();
         public DbSet<UserRole> UserRoles => Set<UserRole>();
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
@@ -30,6 +22,33 @@ namespace UrbanMart.Modules.Identity.Persistence
             modelBuilder.HasDefaultSchema(Schemas.Identity);
 
             modelBuilder.ApplyConfigurationsFromAssembly(typeof(IdentityDbContext).Assembly);
+        }
+
+        public override Task<int> SaveChangesAsync(
+       CancellationToken cancellationToken = default)
+        {
+            SetAuditFields();
+
+            return base.SaveChangesAsync(cancellationToken);
+        }
+
+        private void SetAuditFields()
+        {
+            var now = DateTimeOffset.UtcNow;
+
+            foreach (var entry in ChangeTracker.Entries<BaseEntity>())
+            {
+                switch (entry.State)
+                {
+                    case EntityState.Added:
+                        entry.Entity.CreatedAt = now;
+                        break;
+
+                    case EntityState.Modified:
+                        entry.Entity.UpdatedAt = now;
+                        break;
+                }
+            }
         }
     }
 }

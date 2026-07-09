@@ -18,28 +18,33 @@ namespace UrbanMart.Cli.Commands.Stack
             _processRunner = processRunner;
         }
 
-        public override async Task<int> ExecuteAsync(
-      CommandContext context)
+        //  public override async Task<int> ExecuteAsync(
+        //CommandContext context)
+        //  {
+        //      AnsiConsole.MarkupLine(
+        //          "[yellow]Starting UrbanMart infrastructure...[/]");
+
+        //      var exitCode = await _processRunner.RunAsync(
+        //          "docker",
+        //          "compose up -d");
+
+        //      if (exitCode != 0)
+        //      {
+        //          AnsiConsole.MarkupLine(
+        //              "[red]Failed to start UrbanMart infrastructure.[/]");
+
+        //          return exitCode;
+        //      }
+
+        //      AnsiConsole.MarkupLine(
+        //          "[green]UrbanMart infrastructure started successfully.[/]");
+
+        //      return 0;
+        //  }
+
+        protected override Task<int> ExecuteAsync(CommandContext context, CancellationToken cancellationToken)
         {
-            AnsiConsole.MarkupLine(
-                "[yellow]Starting UrbanMart infrastructure...[/]");
-
-            var exitCode = await _processRunner.RunAsync(
-                "docker",
-                "compose up -d");
-
-            if (exitCode != 0)
-            {
-                AnsiConsole.MarkupLine(
-                    "[red]Failed to start UrbanMart infrastructure.[/]");
-
-                return exitCode;
-            }
-
-            AnsiConsole.MarkupLine(
-                "[green]UrbanMart infrastructure started successfully.[/]");
-
-            return 0;
+            throw new NotImplementedException();
         }
     }
 }

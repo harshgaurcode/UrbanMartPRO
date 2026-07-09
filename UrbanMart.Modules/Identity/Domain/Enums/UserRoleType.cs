@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace UrbanMart.Modules.Identity.Domain.Enums
 {
-    public enum UserRoles
+    public enum UserRoleType
     {
         None,
         Administrator,

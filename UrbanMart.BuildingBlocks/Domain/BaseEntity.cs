@@ -1,15 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace UrbanMart.BuildingBlocks.Domain
+﻿namespace UrbanMart.BuildingBlocks.Domain
 {
-    public class BaseEntity<TKey>
+    public abstract class BaseEntity
     {
-        public TKey Id { get; set; }
-
         public DateTimeOffset CreatedAt { get; set; }
 
         public DateTimeOffset? UpdatedAt { get; set; }
@@ -19,7 +11,12 @@ namespace UrbanMart.BuildingBlocks.Domain
         public Guid? UpdatedBy { get; set; }
     }
 
-    public class BaseEntityWithDelete<TKey> : BaseEntity<TKey>
+    public abstract class BaseEntity<TKey> : BaseEntity
+    {
+        public TKey Id { get; set; } = default!;
+    }
+
+    public abstract class BaseEntityWithDelete<TKey> : BaseEntity<TKey>
     {
         public bool IsDeleted { get; set; }
     }

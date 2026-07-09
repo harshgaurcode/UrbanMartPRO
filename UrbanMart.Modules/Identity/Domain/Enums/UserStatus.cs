@@ -8,9 +8,10 @@ namespace UrbanMart.Modules.Identity.Domain.Enums
 {
     public enum UserStatus
     {
-        PendingVerification = 1,
+        PendingMobileVerification = 1,
+        PendingEmailVerification = 1,
         Active = 2,
         Suspended = 3,
-        Locked = 4
+        Locked = 4,
     }
 }
